@@ -6,12 +6,12 @@ use ssh2::Session;
 
 fn main() {
 
-    let tcp = TcpStream::connect("114.55.129.207:68").unwrap();
+    let tcp = TcpStream::connect("45646").unwrap();
     let mut sess = Session::new().unwrap();
     sess.set_tcp_stream(tcp);
     sess.handshake().unwrap();
   //  sess.userauth_agent("username").unwrap();
-    sess.userauth_password("tigerdev", "CcKFOq05cq9ryCcf_n$*)").unwrap();
+    sess.userauth_password("4564", "123456)").unwrap();
     let mut channel = sess.channel_session().unwrap();
     channel.exec("curl https://m.51kcwc.com").unwrap();
     let mut s = String::new();
