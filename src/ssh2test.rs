@@ -13,7 +13,7 @@ fn main() {
   //  sess.userauth_agent("username").unwrap();
     sess.userauth_password("4564", "123456)").unwrap();
     let mut channel = sess.channel_session().unwrap();
-    channel.exec("curl https://m.51kcwc.com").unwrap();
+    channel.exec("curl https://xx.xxx.com").unwrap();
     let mut s = String::new();
     channel.read_to_string(&mut s).unwrap();
     println!("{}", s);
